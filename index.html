@@ -6,7 +6,19 @@
     <body>
         <h1>Joe's Hotdogs</h1>
         <script language="javascript">
-            var dogs = prompt ("How many hotdogs?","0");
+            var hotdog_price = 3.25;
+            var fry_price = 2.00;
+            var soda_price = 1.50;
+
+            var num_hotdogs = prompt ("How many hotdogs?","0");
+            var num_fries = prompt ("How many fries?","0");
+            var num_soda = prompt ("How many sodas?","0");
+
+            document.writeln("# Hotdogs: ",num_hotdogs," at ",hotdog_price," is $", )
+
+            var subtotal = (hotdog_price * num_hotdogs) + 
+                           (fry_price * num_fries) + (soda_price * num_soda);
+            
         </script>
     </body>
 </html>
