@@ -18,9 +18,10 @@
             var num_soda = prompt ("How many sodas?","0");
             var soda_amount = soda_price * num_soda;
 
-            document.writeln("# Hotdogs: ",num_hotdogs.toFixed(2),
-                             " at ",hotdog_price.toFixed(2)," is $", hotdogs_amount.toFixed(2));
-            document.writeln("# Fries: ",num_fries," at ",fry_price," is $", fries_amount);
+            document.writeln("# Hotdogs: ",num_hotdogs,
+                             " at ",hotdog_price.toFixed(2),
+                             " is $", hotdogs_amount.toFixed(2),"<br/>");
+            document.writeln("# Fries: ",num_fries," at ",fry_price.toFixed(2)," is $", fries_amount.toFixed(2));
             document.writeln("# Sodas: ",num_soda," at ",soda_price," is $", soda_amount);
 
             var subtotal = hotdogs_amount + fries_amount + soda_amount;
