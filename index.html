@@ -21,20 +21,24 @@
             document.writeln("# Hotdogs: ",num_hotdogs,
                              " at ",hotdog_price.toFixed(2),
                              " is $", hotdogs_amount.toFixed(2),"<br>");
-            document.writeln("# Fries: ",num_fries," at ",fry_price.toFixed(2)," is $", fries_amount.toFixed(2));
-            document.writeln("# Sodas: ",num_soda," at ",soda_price," is $", soda_amount);
+            document.writeln("# Fries: ",num_fries,
+                             " at ",fry_price.toFixed(2),
+                             " is $", fries_amount.toFixed(2),"<br>");
+            document.writeln("# Sodas: ",num_soda,
+                             " at ",soda_price.toFixed(2),
+                             " is $", soda_amount.toFixed(2),"<br>");
 
             var subtotal = hotdogs_amount + fries_amount + soda_amount;
             if (subtotal >= 20) {
-                document.writeln("You qualified for our 10% discount.");
+                document.writeln("You qualified for our 10% discount.<br>");
                 subtotal = subtotal * .9;
             }
-            document.writeln("Subtotal: $",subtotal);
+            document.writeln("Subtotal: $",subtotal.toFixed(2),"<br>");
 
             var tax = subtotal * tax_rate;
-            document.writeln("Meals Tax: $",tax);
+            document.writeln("Meals Tax: $",tax.toFixed(2),"<br>");
             var total = subtotal + tax;
-            document.writeln("Total: $",total);
+            document.writeln("Total: $",total.toFixed(2),"<br>");
         </script>
     </body>
 </html>
