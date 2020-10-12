@@ -9,16 +9,30 @@
             var hotdog_price = 3.25;
             var fry_price = 2.00;
             var soda_price = 1.50;
+            var tax_rate = .0625
 
             var num_hotdogs = prompt ("How many hotdogs?","0");
+            var hotdogs_amount = hotdog_price * num_hotdogs;
             var num_fries = prompt ("How many fries?","0");
+            var fries_amount = fry_price * num_fries;
             var num_soda = prompt ("How many sodas?","0");
+            var soda_amount = soda_price * num_soda;
 
-            document.writeln("# Hotdogs: ",num_hotdogs," at ",hotdog_price," is $", )
+            document.writeln("# Hotdogs: ",num_hotdogs," at ",hotdog_price," is $", hotdogs_amount);
+            document.writeln("# Fries: ",num_fries," at ",fry_price," is $", fries_amount);
+            document.writeln("# Sodas: ",num_soda," at ",soda_price," is $", soda_amount);
 
-            var subtotal = (hotdog_price * num_hotdogs) + 
-                           (fry_price * num_fries) + (soda_price * num_soda);
-            
+            var subtotal = hotdogs_amount + fries_amount + soda_amount;
+            if (subtotal >= 20) {
+                document.writeln("You qualified for our 10% discount.");
+                subtotal = subtotal * .9;
+            }
+            document.writeln("Subtotal: $",subtotal);
+
+            var tax = subtotal * tax_rate;
+            document.writeln("Meals Tax: $",tax);
+            var total = subtotal + tax;
+            document.writeln("Total: $",total);
         </script>
     </body>
 </html>
